@@ -7,11 +7,9 @@ $opel = ['model'=>'X3', 'speed'=>100, 'doors'=>3, 'year'=>'2014'];
 
 $cars = ['BMV'=>$bmv, 'Opel'=>$opel, 'Toyota'=>$toyota];
 
-foreach($cars as $car =>$carProps){
+foreach($cars as $car => $carProps){
     echo "Car " . $car . "<br>";
-    foreach($carProps as $prop){
-        echo $prop . " ";
-    }
+    echo $carProps['model'] . ' ' .$carProps['speed'] . ' ' .$carProps['doors'] .' ' .$carProps['year'];
     echo "<br><br>";
 }
 

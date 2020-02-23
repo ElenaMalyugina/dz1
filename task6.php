@@ -2,18 +2,18 @@
 echo "<h4>Задание#6</h4>";
 
 echo "<table>";
-for($i=1; $i<=10; $i++){
+for($row = 1; $row <= 10; $row ++){
     echo "<tr>";
-        for($j=1; $j<=10; $j++){
-            if ($i % 2 == 0 && $j % 2 == 0) {
-                echo "<td> (" . $i * $j  .") </td>";
-            } elseif ($i % 2 != 0 && $j % 2 != 0) {
-                echo "<td> [" . $i * $j  ."] </td>";
+        for($col = 1; $col <=10; $col ++){
+            $res = $row * $col;
+
+            if ($row % 2 == 0 && $col % 2 == 0) {
+                echo "<td> (" . $res .") </td>";
+            } elseif ($row % 2 != 0 && $col % 2 != 0) {
+                echo "<td> [" . $res  ."] </td>";
+            } else {
+                echo "<td>" . $res ."</td>";
             }
-            else {
-                echo "<td>" .$i*$j  ."</td>";
-            }
-            
         }
     echo "</tr>";    
 }
